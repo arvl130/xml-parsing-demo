@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XML Parsing Demo</title>
+  </head>
+  <body>
+    <main>
+      <h1>XML Parsing Demo</h1>
+      <section>
+        <p>Here is a list of notes:</p>
+        <ul id="notes"></ul>
+      </section>
+    </main>
+  </body>
+  <script>
+    async function main() {
+      const response = await fetch("/data.xml")
+      const data = await response.text()
+      const xml = new DOMParser().parseFromString(data, "text/xml")
+      const notesList = document.querySelector("#notes")
+
+      Array.from(xml.getElementsByTagName("note")).forEach((note) => {
+        const li = document.createElement("li")
+        li.innerText = note.innerHTML
+        notesList.appendChild(li)
+      })
+    }
+
+    main()
+  </script>
+</html>
