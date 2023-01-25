@@ -1,7 +1,39 @@
 # XML Parsing Demo
 
+![Demo screenshot](https://i.imgur.com/LPwyjih.png)
+
 This is a demo website that shows how you can fetch data from XML files,
 and load them to the DOM.
+
+## Setup
+
+This project needs a local web server in order to run. Download and install
+[Visual Studio Code](https://code.visualstudio.com/). Then, install the extension
+[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+Alternatively, you may also install the NPM package [live-server](https://www.npmjs.com/package/live-server).
+You will need a terminal to run this program.
+
+Clone this repository:
+
+```sh
+$ git clone https://github.com/arvl130/xml-parsing-demo.git
+$ cd xml-parsing-demo
+```
+
+Open the project with VS Code:
+
+```sh
+$ code .
+```
+
+On the status bar, click on `Go Live`.
+
+If you are running another editor, run the following command on the terminal, to start the web server:
+
+```sh
+$ live-server .
+```
 
 ## License
 
